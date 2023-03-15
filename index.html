@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA</title>
+    <link rel="shortcut icon" href="images/twitter.png" type="image/x-icon">
+
+    <!-- Font Awesome CDN link for using icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- swiper js css library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- Typing animation dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"
+        integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg=="
+        crossorigin="anonymous"></script>
+
+    <!-- import style css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- import script js -->
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <header class="container">
+        <div class="nav">
+            <div class="wrap">
+                <div class="logo">
+                    <img width="200px" height="50px" src="images/logo.png" alt="">
+                </div>
+                <div class="tabs">
+                    <ul>
+                        <li onclick="scrollHome()">Home</li>
+                        <li onclick="scrollImages()">Images</li>
+                        <li onclick="scrollService()">Services</li>
+                        <li onclick="scrollAboutUs()">About us</li>
+                        <li><button class="toggle" onclick="toggleLamp()"><span></span></button></li>
+
+                    </ul>
+                    <div class="bars">
+                        <i class="fa fa-bars fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="__tabs">
+            <li onclick="scrollHome()">Home</li>
+            <li onclick="scrollImages()">Images</li>
+            <li onclick="scrollAboutUs()">About Us</li>
+            <li onclick="scrollService()">Services</li>
+            <li><button class="toggle" onclick="toggleLamp()"><span></span></button></li>
+        </ul>
+    </header>
+
+    <section id="home" class="home">
+        <div class="left">
+            <div class="lamp">
+                <img class="light-stand" width="300" height="400px" src="images/lamp.png" alt="">
+                <img class="light" width="600" height="300px" src="images/light.png" alt="">
+                <img class="sym" width="250" height="70px" src="images/logo.png" alt="">
+            </div>
+        </div>
+        <div class="right">
+            <div style="text-align: center;padding: 0px 15px;">
+                <h1 style="font-size: 55px;color: rgb(40, 175, 40);margin: 20px 0;">Latest in Ligtning.</h1>
+                <p style="font-size: 25px;color: white;margin: 20px 0;">Hope is Being able to see that there is light
+                    despite all of the darkness.</p>
+                <blockquote style="font-size: 20px;color: white;margin: 20px 0;"><i>As we let our light shine, we
+                        unconsciously give other people permission to do the same.
+                        As we are liberated from our own fear, our presence actually liberates others.</i></blockquote>
+                <div style="display: flex;justify-content: center;margin-top: 20px;">
+                    <div class="iam">I'm</div>
+                    <div class="text"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- <hr> -->
+    <section id="image-slider" style="background-color: rgba(0, 0, 0, 0.897);">
+        <div
+            style="width: 100%;text-align: center;color: white;background-color: rgba(31, 94, 55, 0.897);padding: 10px 0;">
+            <h1 style="font-size: 45px;">Image Slider</h1>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img style="max-width: 100%;max-height: 100%;" src="images/1.jpg" alt="">
+                </div>
+                <div class="swiper-slide"><img style="max-width: 100%;max-height: 100%;" src="images/2.jpg" alt="">
+                </div>
+                <div class="swiper-slide"><img style="max-width: 100%;max-height: 100%;" src="images/3.jpg" alt="">
+                </div>
+                <div class="swiper-slide"><img style="max-width: 100%;max-height: 100%;" src="images/4.jpg" alt="">
+                </div>
+                <div class="swiper-slide"><img style="max-width: 100%;max-height: 100%;"
+                        src="https://merriam-webster.com/assets/mw/images/gallery/gal-wap-slideshow-slide/aurora-borealis-7071-bb1ac685e1fecf3a7b7bcd8abac175e6@1x.jpg"
+                        alt=""></div>
+                <div class="swiper-slide"><img style="max-width: 100%;max-height: 100%;"
+                        src="https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt=""></div>
+                <div class="swiper-slide"><img style="max-width: 100%;max-height: 100%;"
+                        src="https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                        alt=""></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <section id="services" style="background-color: rgba(0, 0, 0, 0.897);">
+        <div
+            style="width: 100%;text-align: center;color: white;background-color: rgba(31, 94, 55, 0.897);padding: 10px 0;">
+            <h1 style="font-size: 45px;">Services</h1>
+        </div>
+        <div class="services">
+            <article>
+                <div class="article-wrapper" style="width: 400px;">
+                    <figure>
+                        <img src="https://picsum.photos/id/1011/800/450" alt="" />
+                    </figure>
+                    <div class="article-body">
+                        <h2>This is some title</h2>
+                        <p>
+                            Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet,
+                            congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim
+                            imperdiet egestas.
+                        </p>
+                        <a href="#" class="read-more">
+                            Read more <span class="sr-only">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article>
+
+                <div class="article-wrapper" style="width: 400px;">
+                    <figure>
+                        <img src="https://picsum.photos/id/1005/800/450" alt="" />
+                    </figure>
+                    <div class="article-body">
+                        <h2>This is some title</h2>
+                        <p>
+                            Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet,
+                            congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim
+                            imperdiet egestas.
+                        </p>
+                        <a href="#" class="read-more">
+                            Read more <span class="sr-only">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article>
+
+                <div class="article-wrapper" style="width: 400px;">
+                    <figure>
+                        <img src="https://picsum.photos/id/103/800/450" alt="" />
+                    </figure>
+                    <div class="article-body">
+                        <h2>This is some title</h2>
+                        <p>
+                            Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet,
+                            congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim
+                            imperdiet egestas.
+                        </p>
+                        <a href="#" class="read-more">
+                            Read more <span class="sr-only">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article>
+
+                <div class="article-wrapper" style="width: 400px;">
+                    <figure>
+                        <img src="https://picsum.photos/id/103/800/450" alt="" />
+                    </figure>
+                    <div class="article-body">
+                        <h2>This is some title</h2>
+                        <p>
+                            Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet,
+                            congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim
+                            imperdiet egestas.
+                        </p>
+                        <a href="#" class="read-more">
+                            Read more <span class="sr-only">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article>
+
+                <div class="article-wrapper" style="width: 400px;">
+                    <figure>
+                        <img src="https://picsum.photos/id/103/800/450" alt="" />
+                    </figure>
+                    <div class="article-body">
+                        <h2>This is some title</h2>
+                        <p>
+                            Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet,
+                            congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim
+                            imperdiet egestas.
+                        </p>
+                        <a href="#" class="read-more">
+                            Read more <span class="sr-only">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article>
+
+                <div class="article-wrapper" style="width: 400px;">
+                    <figure>
+                        <img src="https://picsum.photos/id/103/800/450" alt="" />
+                    </figure>
+                    <div class="article-body">
+                        <h2>This is some title</h2>
+                        <p>
+                            Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet,
+                            congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim
+                            imperdiet egestas.
+                        </p>
+                        <a href="#" class="read-more">
+                            Read more <span class="sr-only">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+    <section id="aboutus" style="background-color: rgba(0, 0, 0, 0.897);">
+        <div
+            style="width: 100%;text-align: center;color: white;background-color: rgba(31, 94, 55, 0.897);padding: 10px 0;">
+            <h1 style="font-size: 45px;">About Us</h1>
+        </div>
+        <div class="about">
+            <h1>Team that Engineers your Next Digital Product.</h1>
+            <p>Nearly every organization will need to become a tech company in order to compete tomorrow. Yes, even
+                yours. At Simform, we are on a mission to help companies develop competitiveness and agility using the
+                software.</p>
+            <p>Our Product Innovation Center transforms your engineering from being bottlenecks to growth drivers. We
+                help you to identify and solve critical business challenges with proven technology practices such as
+                DevOps, cloud-native development, and quality engineering services. Our remote agile teams of engineers
+                immerse themselves in your project, maintaining your company culture and working in line with your
+                strategic goals.</p>
+        </div>
+        <div class="services">
+            <article>
+
+                <div class="article-wrapper" style="width: 400px;">
+                    <figure>
+                        <img src="https://picsum.photos/id/103/800/450" alt="" />
+                    </figure>
+                    <div class="article-body">
+                        <h2>This is some title</h2>
+                        <p>
+                            Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet,
+                            congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim
+                            imperdiet egestas.
+                        </p>
+                        <a href="#" class="read-more">
+                            Read more <span class="sr-only">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article>
+
+                <div class="article-wrapper" style="width: 400px;">
+                    <figure>
+                        <img src="https://picsum.photos/id/103/800/450" alt="" />
+                    </figure>
+                    <div class="article-body">
+                        <h2>This is some title</h2>
+                        <p>
+                            Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet,
+                            congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim
+                            imperdiet egestas.
+                        </p>
+                        <a href="#" class="read-more">
+                            Read more <span class="sr-only">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article>
+
+                <div class="article-wrapper" style="width: 400px;">
+                    <figure>
+                        <img src="https://picsum.photos/id/103/800/450" alt="" />
+                    </figure>
+                    <div class="article-body">
+                        <h2>This is some title</h2>
+                        <p>
+                            Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet,
+                            congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim
+                            imperdiet egestas.
+                        </p>
+                        <a href="#" class="read-more">
+                            Read more <span class="sr-only">about this is some title</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <div class="icon">
+            <div class="images">
+                <a href=""><img src="./images/facebook.png" alt="" /></a>
+            </div>
+            <div class="images">
+                <a href=""><img src="./images/insta.png" alt="" /></a>
+            </div>
+            <div class="images">
+                <a href=""><img src="./images/twitter.png" alt="" /></a>
+            </div>
+        </div>
+        <p>info.Support.Markiting</p>
+        <p>Term of Use . Privacy Policy</p>
+        <p>
+            Design and content © 2008-2023 by Jil Patel unless otherwise
+            noted, all rights reserved.
+        </p>
+    </footer>
+
+    <!-- swiperjs library -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+</body>
+
+</html>
